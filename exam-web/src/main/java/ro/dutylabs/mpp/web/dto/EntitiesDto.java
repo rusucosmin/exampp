@@ -15,6 +15,6 @@ import java.util.Set;
 @AllArgsConstructor
 @Setter
 @Getter
-public class ClientsDto implements Serializable {
-    private Set<ClientDto> clients;
+public class EntitiesDto implements Serializable {
+    private Set<EntityDto> entities;
 }

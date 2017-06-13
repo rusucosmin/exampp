@@ -11,6 +11,6 @@ import lombok.*;
 @Setter
 @Builder
 @ToString
-public class ClientDto extends BaseDto {
+public class EntityDto extends BaseDto {
     private String name;
 }
