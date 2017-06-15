@@ -2,7 +2,8 @@ package ro.dutylabs.mpp.core.model;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Table;
 
 @javax.persistence.Entity
 @Table(name = "entities")
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 public class Entity extends BaseEntity<Long> {
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String name;
 }
 

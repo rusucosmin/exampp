@@ -1,0 +1,38 @@
+<h1>Pizza Filter</h1>
+<form>
+  <label>PriceLessThan</label>
+  <br>
+  <input type="checkbox" name="pricelessthan" [(ngModel)]="lessThan" id ="pricelessthan">
+  <input type="number" class="form-control" id="value"
+    required
+    [(ngModel)]="lessThanValue" name="lessThanValue">
+  {{lessThan}}
+  {{lessThanValue}}
+  <br>
+  <label for="cuisine">Cuisine</label>
+  <br>
+  <input type="checkbox" name="isCuisine" [(ngModel)]="isCuisine" id ="iscuisine">
+  <select class="form-control" id="cuisine" required
+          [(ngModel)]="cuisine" name="cuisine">
+    <option *ngFor="let c of cuisines" [value]="c">{{c}}</option>
+  </select>
+  {{isCuisine}}
+  {{cuisine}}
+  <hr>
+  <button type="submit" class="btn btn-success" (click)="filter()">
+    Filter
+  </button>
+  <hr>
+
+    <ul>
+      <li *ngFor="let pizza of pizzas">
+        Id: <b>{{pizza.id}}</b><br>
+        Name: <b>{{pizza.name}}</b><br>
+        Description: <b>{{pizza.description}}</b><br>
+        Price: <b>{{pizza.price}}</b><br>
+        Cuisine: <b>{{pizza.cuisine}}</b><br>
+      </li>
+    </ul>
+
+
+</form>

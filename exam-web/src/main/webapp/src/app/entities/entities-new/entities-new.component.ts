@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntitiesNewComponent implements OnInit {
 
+  cuisine = ['MEDITERRANEAN', 'ORIENTAL'];
+
   constructor() { }
 
   ngOnInit() {

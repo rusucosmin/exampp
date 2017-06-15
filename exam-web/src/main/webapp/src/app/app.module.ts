@@ -9,7 +9,12 @@ import { EntitiesComponent } from './entities/entities.component';
 import { EntitiesListComponent } from './entities/entities-list/entities-list.component';
 import { EntitiesDetailComponent } from './entities/entities-detail/entities-detail.component';
 import { EntitiesNewComponent } from './entities/entities-new/entities-new.component';
-import {EntityService} from "./entities/shared/entity.service";
+import { EntityService } from "./entities/shared/entity.service";
+import { Pizzashop10Component } from './pizzashop10/pizzashop10.component';
+import { PizzaNewComponent } from './pizzashop10/pizza-new/pizza-new.component';
+import {PizzaService} from "./pizzashop10/shared/pizza.service";
+import { PizzaFilterComponent } from './pizzashop10/pizza-filter/pizza-filter.component';
+import { PizzaListComponent } from './pizzashop10/pizza-list/pizza-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,11 @@ import {EntityService} from "./entities/shared/entity.service";
     EntitiesComponent,
     EntitiesListComponent,
     EntitiesDetailComponent,
-    EntitiesNewComponent // and here the components
+    EntitiesNewComponent,
+    Pizzashop10Component,
+    PizzaNewComponent,
+    PizzaFilterComponent,
+    PizzaListComponent // and here the components
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,7 @@ import {EntityService} from "./entities/shared/entity.service";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [EntityService], //add here the services
+  providers: [EntityService, PizzaService], //add here the services
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Pizza Add</h1>
+  <form #pizzaForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="pizza.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" required
+             [(ngModel)]="pizza.description" name="description">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" required
+              [(ngModel)]="pizza.price" name="price">
+    </div>
+
+    <label for="cuisine">Cuisine</label>
+    <select class="form-control" id="cuisine" required
+            [(ngModel)]="pizza.cuisine" name="cuisine">
+      <option *ngFor="let c of cuisines" [value]="c">{{c}}</option>
+    </select>
+
+    <hr>
+    <p>
+    Pizza to add: name: {{pizza.name}}, description: {{pizza.description}}, price: {{pizza.price}}, cuisine: {{pizza.cuisine}}
+    </p>
+    <button type="submit" class="btn btn-success" (click)="save()">
+      Save
+    </button>
+
+  </form>
+</div>
